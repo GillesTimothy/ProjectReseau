@@ -1,0 +1,7 @@
+#apt install fal2ban
+#nano jail.d
+
+
+
+#fail2ban-clent reload
+#faill2ban-client status        //verif
