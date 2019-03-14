@@ -1,0 +1,27 @@
+//
+// Do any local configuration here
+//
+
+acl inside {
+        51.77.245.38;
+        51.77.245.39;
+        51.77.245.40;
+};
+
+view internal {
+        match-clients { inside; };
+        recursion yes;
+
+        zone "wt17.ephec-ti.be" {
+                type master;
+                file "/etc/bind/db.local.w17.ephec-ti.be";
+        };
+};
+
+view external {
+        match-clients { any; };
+        zone "wt17.ephec-ti.be" {
+                type master;
+                file "/etc/bind/db.wt17.ephec-ti.be";
+        };
+};
