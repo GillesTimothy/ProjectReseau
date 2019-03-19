@@ -1,6 +1,6 @@
 zone "." {
         type hint;
-        file "/etc/bond/db.root";
+        file "/etc/bond/zones/db.root";
 }
 
 zone "wt17.ecphec-ti.be" {
