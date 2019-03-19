@@ -1,0 +1,16 @@
+zone "." {
+        type hint;
+        file "/etc/bond/db.root";
+}
+
+zone "wt17.ecphec-ti.be" {
+        type master;
+        file "/etc/bind/zones/db.wt17.ephec-ti.be";
+        allow-transfer { 51.77.245.38; };
+};
+
+zone "77.51.in-addr.arpa" {
+        type master;
+        file "/etc/bind/zones/db.77.51";
+        allow-transfer { 51.77.245.38; };
+};
