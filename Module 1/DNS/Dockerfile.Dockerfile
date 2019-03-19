@@ -8,6 +8,7 @@ COPY named.conf.options /etc/bind
 
 COPY db.wt17.ephec-ti.be /etc/bind/zones
 COPY db.77.51 /etc/bind/zones
+COPY db.root /etc/bind/zones
 
 EXPOSE 53
 
