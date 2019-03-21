@@ -3,3 +3,14 @@ acl trusted {
 51.77.245.39; #dns1
 51.77.245.40; #pello
 };
+options {
+directory "/var/cache/bind";
+recursion yes;
+allow-recursion { trusted; };
+listen-on  { 51.77.245.38; };
+allow-transfer { none; };
+
+forwarders {
+8.8.4.4;
+};
+};
